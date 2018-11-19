@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jeff Reynolds</title>
+
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/css/uikit.min.css" />
+  <link rel="stylesheet" href="./index.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Overpass+Mono:400,600" rel="stylesheet">
+
+  <!-- Dev Icons -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+</head>
+<body>
+
+  <div class="full_screen_container splash">
+    <div class="spacer_container">
+      <header>
+        <div class="animate">
+          <img class="uk-border-circle" width="140" height="140" src="assets/avatar.png" alt="Jeff Reynolds">
+          <h2 class="heading" uk-scrollspy="cls:uk-animation-slide-left-small; repeat: true;">I'm Jeff Reynolds.</h2>
+        </div>
+        <div class="animate" id="dynamic_greeting_container" uk-scrollspy="cls:uk-animation-slide-left-small; repeat: true;">
+          <h2 id="dynamic_greeting"></h2>
+        </div>
+      </header>
+    </div>
+    <span class="down_arrow" uk-icon="icon: arrow-down; ratio: 12" uk-scrollspy="cls:uk-animation-slide-top-small; repeat: true;"></span>
+  </div>
+
+  <div class="specializations">
+    <div id="specializations_card" class="animated_card"></div>
+    <div class="specialization_banner">
+      <h2 class="heading">I specialize in</h2>
+
+      <span class="three_d_space" uk-scrollspy="cls:uk-animation-fade; repeat: true; delay: 300">
+        <div class="icon_container" id="mongo">
+          <div class="front face"><i class="icon devicon-mongodb-plain uk-border-circle"></i></div>
+          <div class="back face"><i class="icon devicon-mongodb-plain-wordmark colored"></i></div>
+        </div>
+      </span>
+
+      <span class="three_d_space" uk-scrollspy="cls:uk-animation-fade; repeat: true; delay: 600">
+        <div class="icon_container" id="express">
+          <div class="front face"><i class="icon devicon-express-original uk-border-circle"></i></div>
+          <div class="back face"><i class="icon devicon-express-original-wordmark colored"></i></div>
+        </div>
+      </span>
+
+      <span class="three_d_space" uk-scrollspy="cls:uk-animation-fade; repeat: true; delay: 900">
+        <div class="icon_container" id="react">
+          <div class="front face"><i class="icon devicon-react-original uk-border-circle"></i></div>
+          <div class="back face"><i class=" icon devicon-react-original-wordmark colored"></i></div>
+        </div>
+      </span>
+
+      <span class="three_d_space" uk-scrollspy="cls:uk-animation-fade; repeat: true; delay: 1200">
+        <div class="icon_container" id="node">
+          <div class="front face"><i class="icon devicon-nodejs-plain uk-border-circle"></i></div>
+          <div class="back face"><i class="icon devicon-nodejs-plain-wordmark colored"></i></div>
+        </div>
+      </span>
+    </div>
+
+    <div class="article_container">
+      <article id="mongo_wheelhouse" class="wheelhouse">
+        <h2>My MongoDB Wheelhouse</h2>
+        <span><code>mongoexport</code> and <code>mongorestore</code> to replicate databases across dev, staging, and prod environments</span>
+        <span>Complex relational bulk upserts</span>
+        <span>Relational schemas with Mongoose and <code>populate()</code></span>
+        <span>Database authentication and authorization</span>
+        <span>Dynamic document size with Mongoose's Mixed type</span>
+        <span>Complex querying</span>
+        <span>Configuration with auth on remote hosts</span>
+        <span><code>cron</code>-scheduled <code>mongodump</code> backups</span>
+        <span>Integrating with mLab in production environments</span>
+      </article>
+
+      <article id="express_wheelhouse" class="wheelhouse">
+        <h2>My Express Wheelhouse</h2>
+        <span>Request / Response Cycle</span>
+        <span>Serving static assets</span>
+        <span>Structured REST API design</span>
+        <span>CSRF prevention with request origin whitelists</span>
+        <span>Proxying requests to external APIs</span>
+        <span>Passport and custom role-based route protection middleware</span>
+        <span>SAML authentication strategy for internal identity providers</span>
+        <span>JSON Web Tokens</span>
+        <span>Templating with EJS</span>
+      </article>
+
+      <article id="react_wheelhouse" class="wheelhouse">
+        <h2>My React Wheelhouse</h2>
+        <span>React in Electron</span>
+        <span>Apollo Client for GraphQL APIs</span>
+        <span><code>react-router-dom</code></span>
+        <span>Protected client-side routes</span>
+        <span>State Management with Redux</span>
+        <span>Container / Stateless, Functional Component pattern</span>
+        <span>State Immutability</span>
+        <span>Requesting REST APIs with <code>axios</code> and <code>fetch</code></span>
+        <span><code>create-react-app</code>, ejection, and Webpack loaders</span>
+        <span><code>styled-components</code>, scoped SCSS, BEM, various component libraries</span>
+        <span>Type-checked compound component patterns with <code>prop-types</span></code></span>
+        <span>Context API</span>
+        <span>Dependency tree-shaking</span>
+        <span>Fragments</span>
+        <span>Portals and <code>react-modal</code></span>
+        <span>HOCs like <code>withRouter</code> and <code>connect</code></span>
+        <span>Highly conditional form validation with custom JS Regular Expressions</span>
+      </article>
+
+      <article id="node_wheelhouse" class="wheelhouse">
+        <h2>My Node Wheelhouse</h2>
+        <span>Asynchronous, functional programming with callbacks, Promises, and <code>async</code> / <code>await</code></span>
+        <span>Task runners like Gulp and Grunt</span>
+        <span>Reading from, and writing to the <code>fs</code></span>
+        <span>CLIs with <code>process.argv</code> and other libraries</span>
+        <span>Automated Emails with <code>nodemailer</code></span>
+        <span>Dependency management with <code>package.json</code>, Yarn, and npm</span>
+        <span>The single-threaded event loop</span>
+        <span>Socket.io</span>
+        <span>Differentiating environments with <code>NODE_ENV</code></span>
+        <span>Integrating with the Okta Identity Provider</span>
+      </article>
+    </div>
+  </div>
+  <div class="full_screen_container resume">
+
+    <div class="spacer_container" uk-scrollspy="target: > h2; cls:uk-animation-slide-left-small; delay: 300">
+      <h2 class="heading">Resume</h2>
+    </div>
+
+    <div class="article_container" uk-scrollspy="target: > article; cls:uk-animation-slide-right-medium; repeat: true; delay: 300">
+
+      <article class="uk-comment uk-comment-primary">
+        <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+          <div class="uk-width-auto">
+            <img class="uk-comment-avatar" src="./assets/general-assembly.png" width="100" height="100" alt="General Assembly Logo">
+          </div>
+          <div class="uk-width-expand">
+            <h4 class="uk-comment-title uk-margin-remove">Full Stack JavaScript Developer</h4>
+            <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+              <li><p>June - September, 2017</p></li>
+              <li><a href="https://profiles.generalassemb.ly/jeffdevelops">Developer Profile</a></li>
+            </ul>
+          </div>
+        </header>
+        <div class="uk-comment-body">
+          <p>
+            A full-time coding bootcamp focused on full-stack JavaScript development with Angular and
+            Node.js that culminated in collaboration with Boulder startups in the Boomtown Accelerator incubator.
+            My development team collaborated with Simor, an online education platform. We drafted a network
+            marketing strategy and created a full-stack application to track the strategy's reach.
+          </p>
+        </div>
+      </article>
+
+      <article class="uk-comment uk-comment-primary">
+        <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+          <div class="uk-width-auto">
+            <img class="uk-comment-avatar" src="./assets/guidepoint.png" width="100" height="100" alt="GuidePoint Security Logo">
+            <img class="uk-comment-avatar" src="./assets/vsoc.png" width="50" height="50" alt="vSOC Logo">
+          </div>
+          <div class="uk-width-expand">
+            <h4 class="uk-comment-title uk-margin-remove">MS Developer Intern <span uk-icon="arrow-right"></span> vSOC Developer</h4>
+            <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+              <li><p>November, 2017 - Present</p></li>
+              <li><a href="https://www.guidepointsecurity.com/">Website</a></li>
+            </ul>
+          </div>
+        </header>
+        <div class="uk-comment-body">
+          <p class="hide_on_small_screens">
+            A Managed Services Security Provider differentiated by 24 / 7 validation of notables, detection of constantly evolving threats
+            with machine learning, and faster response time with automated playbooks.
+          </p>
+          <p>
+            I grew from an internship to a development position under the vSOC Research &amp; Development team, responsible
+            for two large MERN stack applications and numerous customer-specific dashboards consuming Splunk log data. The applications
+            deal with passing customer onboarding data to our sales and engineering teams, organization of correlation searches,
+            dashboards, and automated playbooks, and gamifying the development of quality tools to detect malicious activity in our
+            customers' environments. I mentor and conduct code review for current interns, design user experiences,
+            and manage deployments for our production applications.
+          </p>
+        </div>
+      </article>
+
+      <article class="uk-comment uk-comment-primary">
+        <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+          <div class="uk-width-auto">
+            <img class="uk-comment-avatar" src="./assets/du.svg" width="100" height="100" alt="University Of Denver Logo">
+            <img class="uk-comment-avatar" src="./assets/trilogy.png" width="100" height="100" alt="Trilogy Education Services Logo">
+          </div>
+          <div class="uk-width-expand">
+            <h4 class="uk-comment-title uk-margin-remove">Teaching Assistant</h4>
+            <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+              <li><p>January, 2018 - Present</p></li>
+              <li class="hide_on_small_screens">
+                <a href="https://bootcamp.du.edu/coding/landing-full-2/?s=Google-Brand&trkid=V3ADW427552_37948348494_kwd-279084471060__241279494124_g_c__&gclid=Cj0KCQjwuuHdBRCvARIsAELQRQGJziJH2PZQSQtGfPqZ6zEc4qWv01MkfQbX8eGVCUathe8I1WkkFuMaAg_eEALw_wcB">
+                  University of Denver Coding Bootcamp
+                </a>
+              </li>
+              <li class="hide_on_small_screens"><a href="https://www.trilogyed.com/">Trilogy Education Services</a></li>
+            </ul>
+          </div>
+        </header>
+        <div class="uk-comment-body">
+          <p class="hide_on_small_screens">
+            A part-time, six-month coding bootcamp delivering regionalized content and providing students a highly collaborative,
+            fast-paced learning environment.
+          </p>
+          <p>
+            I troubleshoot students' environment- and code-related issues on the fly, by walking students through the problem-solving
+            process, and recapitulating the concepts learned to diagnose and solve those problems. Grading coursework is an opportunity
+            to evaluate students' code and mentor their growth by suggesting refactoring opportunities and ways to avoid pitfalls. 
+            Working for the program provides a means to stay fresh with current tools in web development, and a means to share my
+            enthusiasm for the topics we cover with new members in the community.
+          </p>
+        </div>
+      </article>
+
+      <article class="uk-comment uk-comment-primary">
+        <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+          <div class="uk-width-auto">
+            <img class="uk-comment-avatar" src="./assets/GoSon_Logo_Primary.png" width="80" height="80" alt="Go Son Logo">
+          </div>
+          <div class="uk-width-expand">
+            <h4 class="uk-comment-title uk-margin-remove">Designer, Full-Stack Developer</h4>
+            <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+              <li><p>May, 2018 - Present</p></li>
+              <li>
+                <a href="https://www.goson.org/">
+                  GoSon Website
+                </a>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <div class="uk-comment-body">
+          <p class="hide_on_small_screens">
+            A new company working towards building media, travel, work, and nightlife structures, in philanthropic and creative capacities for
+            gay men who desire healthy, connected lives.
+          </p>
+          <p>
+            I work <span class="italics">pro-bono</span> with visionary James Markel toward the cause of creating an atmosphere to empower gay men to be the best that they can be,
+            no matter what industry they find themselves in. Currently working on an Instagram integration with GoSon's primary marketing campaign, we've
+            worked together to design and build an informational website that provides visitors a way to both contribute their story and bolster the
+            business's viability.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="full_screen_container contact">
+    <div class="spacer_container" uk-scrollspy="target: > h2; cls:uk-animation-slide-left-small; repeat: true; delay: 300">
+    </div>
+  </div>
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/js/uikit-icons.min.js"></script>
+
+  <!-- Scroll Magic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="./js/index.js"></script>
+  <script src="./js/scroll.js"></script>
+  <script src="./js/splashpage.js"></script>
+  <script src="./js/specializations.js"></script>
+</body>
+</html>
